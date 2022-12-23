@@ -1,0 +1,967 @@
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background-color: rgb(255, 0, 0);
+    width: 3em;
+    height: 3em;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  #subscriptionmagazineaddnewformrightdateinputfromdate {
+    width: 3em;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #subscriptionmagazineaddnewformrightdateinputTodate {
+    width: 3em;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #subscriptionmagazineaddnewformrightdateinputDDdate {
+    width: 3em;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+#subscriptionmagazinebap{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 2em;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(155, 155, 155);
+}
+#subscriptionmagazinetablebap{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#subscriptionmagazinetablebapmsg{
+    text-align: center;
+    width: 100%;
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+#subscriptionmagazinetablebaptable{
+    width: 100%;
+    margin-bottom: 1%;
+    background-color: white;
+}
+#subscriptionmagazinetablebaptable tr{
+    background-color: rgb(222, 222, 222);
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgba(47, 47, 47, 0.318);
+}
+
+#subscriptionmagazinetablebaptable tr th{
+    width: 20%;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#subscriptionmagazinetablebaptable tr td{
+    width: 20%;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#subscriptionmagazinetablebaptablebap{
+    width: 100%;
+    height: fit-content;
+    overflow-y: auto;
+    margin-bottom: 1%;
+}
+#subscriptionmagazinefinalbuttons{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+#subscriptionmagazinefinalbuttons button{
+    width: fit-content;
+    height: 2em;
+    border-radius: 1em;
+    border: none;
+    box-shadow: 0px 0px 2px rgba(78, 78, 78, 0.394);
+}
+/*************************************************************************************************************************************/
+
+#subscriptionmagazineeditmagazinebap{
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+#subscriptionmagazineaddnew{
+    width: 100%;
+    height: fit-content;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(153, 153, 153);
+    border-radius: 2em;
+}
+
+#subscriptionmagazineeditmagazine{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(153, 153, 153);
+    border-radius: 2em;
+}
+#subscriptionmagazineaddnewnavigation{
+    width: 98%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 2%;
+    background-color: rgba(250, 235, 215, 0);
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    padding-top: 2em;
+    padding-left: 2em;
+}
+#subscriptionmagazineaddnewform{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(250, 235, 215, 0);
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+
+}
+#subscriptionmagazineaddnewformupper{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0);
+    
+}
+#subscriptionmagazineaddnewformleft{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(165, 42, 42, 0);
+}
+#subscriptionmagazineaddnewformlefttitlepublisher{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#subscriptionmagazineaddnewformlefttitlepublisher div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#subscriptionmagazineaddnewformlefttitlepublisher div label{
+    width: 30%;
+    height: 2em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#subscriptionmagazineaddnewformlefttitlepublisher div input{
+    width: 70%;
+    outline: none;
+    border: none;
+    height: 2em;
+    border-radius: 5px;
+}
+#subscriptionmagazineaddnewformleftselectinput {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#subscriptionmagazineaddnewformleftselectinput div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#subscriptionmagazineaddnewformleftselectinput div label{
+    width: 30%;
+    height: 2em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#subscriptionmagazineaddnewformleftselectinput div select{
+    width: 70%;
+    outline: none;
+    border: none;
+    height: 2em;
+    border-radius: 5px;
+}
+#subscriptionmagazineaddnewformleftddnoinput{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#subscriptionmagazineaddnewformleftddnoinput label{
+    width: 30%;
+    height: 2em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#subscriptionmagazineaddnewformleftddnoinput input{
+    width: 70%;
+    outline: none;
+    border: none;
+    height: 2em;
+    border-radius: 5px;
+}
+#subscriptionmagazineaddnewformright{
+    width: 50%;
+}
+#subscriptionmagazineaddnewformrighttextinput{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#subscriptionmagazineaddnewformrighttextinput div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#subscriptionmagazineaddnewformrighttextinput div label{
+    width: 30%;
+    text-align: center;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#subscriptionmagazineaddnewformrighttextinput div input{
+    width: 70%;
+    height: 2em;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+#subscriptionmagazineaddnewformrightdateinput{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#subscriptionmagazineaddnewformrightdateinput div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#subscriptionmagazineaddnewformrightdateinput div label{
+    width: 30%;
+    height: 2em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#subscriptionmagazineaddnewformrightdateinput div #subscriptionmagazineaddnewformrightdateinputTodateplacefordatevalue{
+    width: 65%;
+    height: 2em;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+#subscriptionmagazineaddnewformrightdateinput div #subscriptionmagazineaddnewformrightdateinputfromdateplacefordatevalue{
+    width: 65%;
+    height: 2em;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+#subscriptionmagazineaddnewformrightdateinput div #subscriptionmagazineaddnewformrightdateinputDDdateplacefordatevalue{
+    width: 65%;
+    height: 2em;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+#subscriptionmagazineaddnewformrightdateinput div input{
+    width: 2.5em;
+    height: 2.5em;
+}
+#subscriptionmagazineaddnewformfinalbutton{
+    width: 100%;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#subscriptionmagazineaddnewformfinalbutton button{
+    height: 2em;
+    border: none;
+
+}
+#subscriptionmagazineaddnewform{
+    width: 97%;
+    height: fit-content;
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2em;
+    padding: 1em;
+    background-color: rgb(225, 225, 225);
+}
+/*******************************************************************************************************************************************/
+/*******************************************************************************************************************************************/
+#subscriptionmagazinerenewsubbap{
+    width: 100%;
+    height: fit-content;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/********* fun **********/
+#subscriptionmagazinerenewsubbaptablebap{
+    width: 98%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+}
+#subscriptionmagazinerenewsubbaptable{
+    width: 100%;
+    background-color:rgb(225, 225, 225) ;
+}
+
+#subscriptionmagazinerenewsubsform{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#subscriptionmagazinerenewsubbaptablebaprenewsubsbuttonbap{
+    width: 100%;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#subscriptionmagazinerenewsubbaptablebaprenewsubsbuttonbap button{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    border: none;
+    border-radius: 5px;
+}
+#subscriptionmagazinerenewsubbapmsg{
+    display: flex;
+    height: 2em;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+#subscriptionmagazinerenewsubsformfinalbutton{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 2em;
+}
+#subscriptionmagazinerenewsubsformfinalbuttonrenewsubs{
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    border-radius: 5px;
+}
+#subscriptionmagazinerenewsubbapnavigationback{
+    width: 96%;
+    padding-left: 4%;
+    padding-top:1% ;
+    display: none;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+#subscriptionmagazinerenewsubbapnavigationbackbutton{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    border: none;
+    border-radius: 5px;
+}
+
+#subscriptionmagazinerenewsubsformbap{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/********* fun*/
+/********   subscriptionmagazinerenewsubbaptablebap   *********/
+/********   subscriptionmagazinerenewsubbapnavigationback ********/
+#subscriptionmagazinerenewsubsformbap{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#subscriptionmagazinerenewsubsformbapnavigationback{
+    width: 96%;
+    padding-left: 4%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#subscriptionmagazinerenewsubsformbapnavigationbackbutton{
+    border: none;
+    font-size: large;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/******** renew form css *******/
+/*
+8
+88
+8
+8
+8
+8
+*/
+
+#subscriptionmagazinerenewform{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(250, 235, 215, 0);
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+
+}
+#subscriptionmagazinerenewformupper{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0);
+    
+}
+#subscriptionmagazinerenewformleft{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(165, 42, 42, 0);
+}
+#subscriptionmagazinerenewformlefttitlepublisher{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#subscriptionmagazinerenewformlefttitlepublisher div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#subscriptionmagazinerenewformlefttitlepublisher div label{
+    width: 30%;
+    height: 2em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#subscriptionmagazinerenewformlefttitlepublisher div input{
+    width: 70%;
+    outline: none;
+    border: none;
+    height: 2em;
+    border-radius: 5px;
+}
+#subscriptionmagazinerenewformleftselectinput {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#subscriptionmagazinerenewformleftselectinput div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#subscriptionmagazinerenewformleftselectinput div label{
+    width: 30%;
+    height: 2em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#subscriptionmagazinerenewformleftselectinput div select{
+    width: 70%;
+    outline: none;
+    border: none;
+    height: 2em;
+    border-radius: 5px;
+}
+#subscriptionmagazinerenewformleftddnoinput{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#subscriptionmagazinerenewformleftddnoinput label{
+    width: 30%;
+    height: 2em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#subscriptionmagazinerenewformleftddnoinput input{
+    width: 70%;
+    outline: none;
+    border: none;
+    height: 2em;
+    border-radius: 5px;
+}
+#subscriptionmagazinerenewformright{
+    width: 50%;
+}
+#subscriptionmagazinerenewformrighttextinput{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#subscriptionmagazinerenewformrighttextinput div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#subscriptionmagazinerenewformrighttextinput div label{
+    width: 30%;
+    text-align: center;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#subscriptionmagazinerenewformrighttextinput div input{
+    width: 70%;
+    height: 2em;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+#subscriptionmagazinerenewformrightdateinput{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#subscriptionmagazinerenewformrightdateinput div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#subscriptionmagazinerenewformrightdateinput div label{
+    width: 30%;
+    height: 2em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#subscriptionmagazinerenewformrightdateinput div #subscriptionmagazinerenewformrightdateinputTodateplacefordatevalue{
+    width: 65%;
+    height: 2em;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+#subscriptionmagazinerenewformrightdateinput div #subscriptionmagazinerenewformrightdateinputfromdateplacefordatevalue{
+    width: 65%;
+    height: 2em;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+#subscriptionmagazinerenewformrightdateinput div #subscriptionmagazinerenewformrightdateinputDDdateplacefordatevalue{
+    width: 65%;
+    height: 2em;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+#subscriptionmagazinerenewformrightdateinput div input{
+    width: 2.5em;
+    height: 2.5em;
+}
+#subscriptionmagazinerenewformfinalbutton{
+    width: 100%;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#subscriptionmagazinerenewformfinalbutton button{
+    height: 2em;
+    border: none;
+
+}
+#subscriptionmagazinerenewform{
+    width: 97%;
+    height: fit-content;
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2em;
+    padding: 1em;
+    background-color: rgb(225, 225, 225);
+}
+
+/***** edit magazine form*************/
+
+#subscriptionmagazineeditform{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(250, 235, 215, 0);
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+
+}
+#subscriptionmagazineeditformupper{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0);
+    
+}
+#subscriptionmagazineeditformleft{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(165, 42, 42, 0);
+}
+#subscriptionmagazineeditformlefttitlepublisher{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#subscriptionmagazineeditformlefttitlepublisher div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#subscriptionmagazineeditformlefttitlepublisher div label{
+    width: 30%;
+    height: 2em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#subscriptionmagazineeditformlefttitlepublisher div input{
+    width: 70%;
+    outline: none;
+    border: none;
+    height: 2em;
+    border-radius: 5px;
+}
+#subscriptionmagazineeditformleftselectinput {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#subscriptionmagazineeditformleftselectinput div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#subscriptionmagazineeditformleftselectinput div label{
+    width: 30%;
+    height: 2em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#subscriptionmagazineeditformleftselectinput div select{
+    width: 70%;
+    outline: none;
+    border: none;
+    height: 2em;
+    border-radius: 5px;
+}
+#subscriptionmagazineeditformleftddnoinput{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#subscriptionmagazineeditformleftddnoinput label{
+    width: 30%;
+    height: 2em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#subscriptionmagazineeditformleftddnoinput input{
+    width: 70%;
+    outline: none;
+    border: none;
+    height: 2em;
+    border-radius: 5px;
+}
+#subscriptionmagazineeditformright{
+    width: 50%;
+}
+#subscriptionmagazineeditformrighttextinput{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#subscriptionmagazineeditformrighttextinput div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#subscriptionmagazineeditformrighttextinput div label{
+    width: 30%;
+    text-align: center;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#subscriptionmagazineeditformrighttextinput div input{
+    width: 70%;
+    height: 2em;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+#subscriptionmagazineeditformrightdateinput{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#subscriptionmagazineeditformrightdateinput div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#subscriptionmagazineeditformrightdateinput div label{
+    width: 30%;
+    height: 2em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#subscriptionmagazineeditformrightdateinput div #subscriptionmagazineeditformrightdateinputTodateplacefordatevalue{
+    width: 65%;
+    height: 2em;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+#subscriptionmagazineeditformrightdateinput div #subscriptionmagazineeditformrightdateinputfromdateplacefordatevalue{
+    width: 65%;
+    height: 2em;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+#subscriptionmagazineeditformrightdateinput div #subscriptionmagazineeditformrightdateinputDDdateplacefordatevalue{
+    width: 65%;
+    height: 2em;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+#subscriptionmagazineeditformrightdateinput div input{
+    width: 2.5em;
+    height: 2.5em;
+}
+#subscriptionmagazineeditformfinalbutton{
+    width: 100%;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#subscriptionmagazineeditformfinalbutton button{
+    height: 2em;
+    border: none;
+
+}
+#subscriptionmagazineeditform{
+    width: 97%;
+    height: fit-content;
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2em;
+    padding: 1em;
+    background-color: rgb(225, 225, 225);
+}
+#subscriptionmagazineeditnavigation{
+    width: 95%;
+    padding-left: 5%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 1%;
+}
+
+#subscriptionmagazineeditmagazinenavigationbutton{
+    font-size: large;
+    border: none;
+    height: 1.3em;
+    border-radius: 5px;
+}
+#subscriptionmagazineaddnewnavigationbutton{
+    font-size: large;
+    border: none;
+    height: 1.3em;
+    border-radius: 5px;
+}
+#subscriptionmagazineaddnewnavigation{
+    margin-top: 0px;
+}
+
+
+
+#subscriptionmagazinerenewsubbaptable tr:hover{
+	background-color:grey;
+}
+#subscriptionmagazinerenewwformrightdateinput div{
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+}
+#subscriptionmagazinerenewwformrightdateinput div label{
+	width:30%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#subscriptionmagazinerenewwformrightdateinput div input[type="text"]{
+	width:65%;
+	height:2em;
+}
+#subscriptionmagazinerenewwformrightdateinput div input[type="date"]{
+	width:5%;
+}
+#subscriptionmagazinerenewwformrightdateinput div 
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background-color: rgb(255, 0, 0);
+    width: 3em;
+    height: 3em;
+    margin: 0px;
+    padding: 0px;
+  }
+
