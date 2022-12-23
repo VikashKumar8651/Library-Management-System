@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="circulationcontrol.css" />
+    <link rel="stylesheet" href="dashboard2.css" />
+    <script src="jquery-3.6.0.js"></script>
+    <script src="moment-with-locales.min.js"></script>
+    <script src="userlog.js"></script>
+    <title>Document</title>
+    <style>
+      #mainstockcontainer {
+        padding: 0%;
+        margin: 0%;
+        height: fit-content;
+        width: 100%;
+        background-color: rgb(155, 155, 155);
+        border-radius: 1%;
+      }
+
+      #maintainstockform {
+        height: fit-content;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #maintainstockform input,
+      select,
+      option {
+        border-radius: 5px;
+        width: 55%;
+      }
+
+      label {
+        margin: 3.4% 0%;
+        display: flex;
+        font-size: large;
+      }
+
+      #mainstockhead {
+        height: 5em;
+        border-radius: 5px;
+        width: 100%;
+        text-align: center;
+      }
+
+      #mainstockinput {
+        height: 80%;
+        width: 100%;
+      }
+
+      #stockinput {
+        height: 100%;
+        border-radius: 5px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+      }
+
+      #stockinputleft {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+      }
+
+      #mainstkll {
+        height: 100%;
+        width: 45%;
+        margin-left: 10%;
+        margin-top: 1%;
+      }
+
+      #mainstklr {
+        height: 100%;
+        width: 45%;
+        margin-right: 15%;
+      }
+
+      #mainstklr input {
+        margin: 5.4% 0%;
+        border-radius: 5px;
+        width: 120%;
+      }
+
+      #stockinputright {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+      }
+
+      #mainstkrl {
+        height: 100%;
+        width: 45%;
+        margin-left: 10%;
+        margin-top: 1%;
+      }
+
+      #mainstkrr {
+        height: 100%;
+        width: 45%;
+        margin-right: 15%;
+      }
+
+      #mainstkrr input,
+      option,
+      select {
+        margin: 5.4% 0%;
+        border: 1px solid black;
+        border-radius: 5px;
+        width: 120%;
+      }
+
+      #mainstockbttn {
+        height: 10%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 1%;
+      }
+
+      #mainstockbttn input {
+        height: 2em;
+        width: 12%;
+        margin-top: 1%;
+        margin-bottom: 1%;
+        border: none;
+      }
+      #mainstockbttn input:active {
+        background-color: rgb(198, 198, 198);
+      }
+      #maintainstockform input {
+        height: 2em;
+        border: none;
+        outline: none;
+      }
+      #maintainstockform select {
+        height: 2em;
+        border: none;
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="body">
+      <div id="pehlabeta">
+        <div id="navisecn">
+          <div id="naviadminpicsecn" style="cursor: pointer">
+            <div id="adminpicbap"><div id="adminpic"></div></div>
+            <div id="admininfo" style="color: white"></div>
+          </div>
+          <div id="quickmenu">
+            <div id="quickmenulist">
+              <div id="quickop" style="cursor: pointer">
+                <img
+                  src="icons8-home-480.png"
+                  alt=""
+                  width="25px"
+                  height="25px"
+                  id="dashboardminilogo"
+                />
+                <p>dashboard</p>
+                <img
+                  src="icons8-home-480.png"
+                  alt=""
+                  width="25px"
+                  height="25px"
+                  style="opacity: 0"
+                />
+              </div>
+              <div id="quickop1">
+                <img src="download (1).png" alt="" width="25px" height="25px" />
+                <p style="cursor: pointer">Cataloguing</p>
+                <img
+                  src="icons8-plus-+-240.png"
+                  width="15em"
+                  height="15em"
+                  id="quickop1ex"
+                />
+              </div>
+              <div id="quickopdrop1">
+                <div class="quickopdropbuttons1a" id="quickopdropbuttons1a1">
+                  <img
+                    src="icons8-circle-96.png"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+                  <p style="cursor: pointer">Maintain Stocks</p>
+                  <img
+                    src="icons8-plus-+-240.png"
+                    width="15em"
+                    height="15em"
+                    style="opacity: 0"
+                  />
+                </div>
+                <div class="quickopdropbuttons1a" id="quickopdropbuttons1a2">
+                  <img
+                    src="icons8-circle-96.png"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+                  <p style="cursor: pointer">Subscribe</p>
+                  <img
+                    src="icons8-plus-+-240.png"
+                    width="15em"
+                    height="15em"
+                    style="opacity: 0"
+                  />
+                </div>
+                <!-- <div class="quickopdropbuttons1a">
+                  <img
+                    src="icons8-circle-96.png"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+                  <p style="cursor: pointer">Magazine Attendance</p>
+                  <img
+                    src="icons8-plus-+-240.png"
+                    width="15em"
+                    height="15em"
+                    style="opacity: 0"
+                  />
+                </div>
+                <div class="quickopdropbuttons1a">
+                  <img
+                    src="icons8-circle-96.png"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+                  <p style="cursor: pointer">BoundVolumeMaintenance</p>
+                </div>
+                <div class="quickopdropbuttons1a">
+                  <img
+                    src="icons8-circle-96.png"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+                  <p style="cursor: pointer">Change Status</p>
+                  <img
+                    src="icons8-plus-+-240.png"
+                    width="15em"
+                    height="15em"
+                    style="opacity: 0"
+                  /> 
+                </div>-->
+              </div>
+              <div id="quickop2">
+                <img src="download (1).png" alt="" width="25px" height="25px" />
+                <p style="cursor: pointer">Circulation Control</p>
+                <img
+                  src="icons8-plus-+-240.png"
+                  width="15em"
+                  height="15em"
+                  id="quickop2ex"
+                />
+              </div>
+              <div id="quickopdrop2">
+                <div class="quickopdropbuttons2a" id="quickopdropbuttons2a1">
+                  <img
+                    src="icons8-circle-96.png"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+                  <p style="cursor: pointer">Circulations</p>
+                  <img
+                    src="icons8-plus-+-240.png"
+                    width="15em"
+                    height="15em"
+                    style="opacity: 0"
+                  />
+                </div>
+                <!-- <div class="quickopdropbuttons2a">
+                  <img
+                    src="icons8-circle-96.png"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+                  <p style="cursor: pointer">Reservations</p>
+                  <img
+                    src="icons8-plus-+-240.png"
+                    width="15em"
+                    height="15em"
+                    style="opacity: 0"
+                  />
+                </div> -->
+              </div>
+              <div id="quickop3">
+                <img src="download (1).png" alt="" width="25px" height="25px" />
+                <p style="cursor: pointer">Acquisitions</p>
+                <img
+                  src="icons8-plus-+-240.png"
+                  width="15em"
+                  height="15em"
+                  id="quickop3ex"
+                />
+              </div>
+              <div id="quickopdrop3">
+                <div class="quickopdropbuttons2a" id="quickopdropbuttons3a1">
+                  <img
+                    src="icons8-circle-96.png"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+                  <p style="cursor: pointer">Ordering</p>
+                  <img
+                    src="icons8-plus-+-240.png"
+                    width="15em"
+                    height="15em"
+                    style="opacity: 0"
+                  />
+                </div>
+                <div class="quickopdropbuttons2a">
+                  <img
+                    src="icons8-circle-96.png"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+                  <p style="cursor: pointer">Vendor Maintenance</p>
+                  <img
+                    src="icons8-plus-+-240.png"
+                    width="15em"
+                    height="15em"
+                    style="opacity: 0"
+                  />
+                </div>
+              </div>
+
+              <div id="quickop4">
+                <img src="download (1).png" alt="" width="25px" height="25px" />
+                <p style="cursor: pointer">Account Maintenance</p>
+                <img
+                  src="icons8-plus-+-240.png"
+                  width="15em"
+                  height="15em"
+                  id="quickop4ex"
+                />
+              </div>
+              <div id="quickopdrop4">
+                <div class="quickopdropbuttons2a" id="quickopdropbuttons4a1">
+                  <img
+                    src="icons8-circle-96.png"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+                  <p style="cursor: pointer">Create Account Manually</p>
+                </div>
+                <div class="quickopdropbuttons2a" style="display: none">
+                  <img
+                    src="icons8-circle-96.png"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+                  <p style="cursor: pointer">Create Account Automate</p>
+                </div>
+              </div>
+              <div id="quickop5">
+                <img src="download (1).png" alt="" width="25px" height="25px" />
+                <p style="cursor: pointer">Reports</p>
+                <img
+                  src="icons8-plus-+-240.png"
+                  width="15em"
+                  height="15em"
+                  id="quickop5ex"
+                />
+              </div>
+              <div id="quickopdrop5">
+                <div class="quickopdropbuttons2a" id="quickopdropbuttons5a1">
+                  <img
+                    src="icons8-circle-96.png"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+                  <p style="cursor: pointer">Daily Reports</p>
+                  <img
+                    src="icons8-plus-+-240.png"
+                    width="15em"
+                    height="15em"
+                    style="opacity: 0"
+                  />
+                </div>
+                <div class="quickopdropbuttons2a" id="quickopdropbuttons5a2">
+                  <img
+                    src="icons8-circle-96.png"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+                  <p style="cursor: pointer">Book Statistics</p>
+                  <img
+                    src="icons8-plus-+-240.png"
+                    width="15em"
+                    height="15em"
+                    style="opacity: 0"
+                  />
+                </div>
+                <!-- <div class="quickopdropbuttons2a">
+                  <img
+                    src="icons8-circle-96.png"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+                  <p style="cursor: pointer">Department Expenditure</p>
+                </div>
+                <div class="quickopdropbuttons2a">
+                  <img
+                    src="icons8-circle-96.png"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+                  <p style="cursor: pointer">Department Libraries</p>
+                  <img
+                    src="icons8-plus-+-240.png"
+                    width="15em"
+                    height="15em"
+                    style="opacity: 0"
+                  />
+                </div>
+                <div class="quickopdropbuttons2a">
+                  <img
+                    src="icons8-circle-96.png"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+                  <p style="cursor: pointer">Department Volume Lists</p>
+                </div>
+                <div class="quickopdropbuttons2a">
+                  <img
+                    src="icons8-circle-96.png"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+                  <p style="cursor: pointer">View Account Holders</p>
+                  <img
+                    src="icons8-plus-+-240.png"
+                    width="15em"
+                    height="15em"
+                    style="opacity: 0"
+                  />
+                </div>
+                <div class="quickopdropbuttons2a">
+                  <img
+                    src="icons8-circle-96.png"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+                  <p style="cursor: pointer">Magazines Subscribed</p>
+                  <img
+                    src="icons8-plus-+-240.png"
+                    width="15em"
+                    height="15em"
+                    style="opacity: 0"
+                  />
+                </div> -->
+              </div>
+              <div id="quickop6">
+                <img src="download (1).png" alt="" width="25px" height="25px" />
+                <p style="cursor: pointer">Administeration</p>
+                <img
+                  src="icons8-plus-+-240.png"
+                  width="15em"
+                  height="15em"
+                  id="quickop6ex"
+                />
+              </div>
+              <div id="quickopdrop6">
+                <div class="quickopdropbuttons2a" id="quickopdropbuttons6a1">
+                  <img
+                    src="icons8-circle-96.png"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+                  <p style="cursor: pointer">New Admin</p>
+                  <img
+                    src="icons8-plus-+-240.png"
+                    width="15em"
+                    height="15em"
+                    style="opacity: 0"
+                  />
+                </div>
+                <div class="quickopdropbuttons2a" id="quickopdropbuttons6a2">
+                  <img
+                    src="icons8-circle-96.png"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+                  <p style="cursor: pointer">About us</p>
+                  <img
+                    src="icons8-plus-+-240.png"
+                    width="15em"
+                    height="15em"
+                    style="opacity: 0"
+                  />
+                </div>
+              </div>
+              <div id="quickop7">
+                <img src="download (1).png" alt="" width="25px" height="25px" />
+                <p style="cursor: pointer">Utilities</p>
+                <img
+                  src="icons8-plus-+-240.png"
+                  width="15em"
+                  height="15em"
+                  id="quickop7ex"
+                />
+              </div>
+              <div id="quickopdrop7"></div>
+              <div id="quickop8">
+                <img src="download (1).png" alt="" width="25px" height="25px" />
+                <p style="cursor: pointer">OPAC</p>
+                <img
+                  src="icons8-plus-+-240.png"
+                  width="15em"
+                  height="15em"
+                  id="quickop8ex"
+                />
+              </div>
+              <div id="quickopdrop8"></div>
+            </div>
+          </div>
+          <div id="dashboardlogoutbap">
+            <div id="dashboardlogoutbapbtn">
+              <img src="power.png" alt="logout" width="20em" height="25em" />
+              <p>Log Out</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="dusrabeta">
+        <div id="dashboardbap">
+          <div id="mainstockcontainer">
+            <form id="maintainstockform">
+              <div id="mainstockhead">
+                <h2>MAIN STOCK ITEM-VIGNAN</h2>
+              </div>
+              <div id="mainstockinput">
+                <div id="stockinput">
+                  <div id="stockinputleft">
+                    <div id="mainstkll">
+                      <label for="stkaccno">Accession No</label><br />
+                      <label for="stkcallno">Call No</label><br />
+                      <label for="stktitle">Title</label><br />
+                      <label for="stkauthor">Author</label><br />
+                      <label for="stkpub">Publisher</label><br />
+                      <label for="stkdtyr">Date</label><br />
+                      <label for="stkedition">Edition</label><br />
+                      <label for="stknoofpage">No.of Pages</label><br />
+                      <label for="stksize">Size</label><br />
+                      <label for="stkprice">Price</label><br />
+                    </div>
+                    <div id="mainstklr">
+                      <input type="number" name="stkaccno" id="" /><br />
+                      <input type="number" name="stkcallno" id="" /><br />
+                      <input type="text" name="stktitle" id="" /><br />
+                      <input type="text" name="stkauthor" id="" /><br />
+                      <input type="text" name="stkpub" id="" /><br />
+                      <input type="date" name="stkdtyr" id="" /><br />
+                      <input type="number" name="stkedition" id="" /><br />
+                      <input type="number" name="stknoofpage" id="" /><br />
+                      <input type="number" name="stksize" id="" /><br />
+                      <input type="number" name="stkprice" id="" /><br />
+                    </div>
+                  </div>
+                  <div id="stockinputright">
+                    <div id="mainstkrl">
+                      <label for="stkdept">Department</label><br />
+                      <label for="stkbooktp">Book Type</label><br />
+                      <label for="stkenterdt">Entered Date</label><br />
+                      <label for="stkbilldt">Bill Date</label><br />
+                      <label for="stknoofcpy">No.of Copies</label><br />
+                      <label for="stkisbn">ISBN</label><br />
+                      <label for="stkfrs">Floor/Rack/Self</label><br />
+                      <label for="stkkywrd">Key Words(,Separator)</label><br />
+                      <label for="stkbillno">Bill Number</label><br />
+                      <label for="stkvend">Vendor</label>
+                    </div>
+                    <div id="mainstkrr">
+                      <select
+                        name="mainstkrrDEPARTMENTLIB"
+                        id="mainstkrrDEPARTMENTLIB"
+                        class="stkvendc"
+                      >
+                        <option value="select" align="center">
+                          --Select--
+                        </option>
+                        <option value="AGRICULTURE">AGRICULTURE</option>
+                        <option value="AGRICULTURE_MTECH">
+                          AGRICULTURE_MTECH
+                        </option>
+                        <option value="AI&ML">AI&ML</option>
+                        <option value="AUTOMOBILE">AUTOMOBILE</option>
+                        <option value="B.SC(AGRICULTURE)">
+                          B.SC(AGRICULTURE)
+                        </option>
+                        <option value="BBA">BBA</option>
+                        <option value="BBM">BBM</option>
+                        <option value="BCA">BCA</option>
+                        <option value="BOIINFORMATICS">BOIINFORMATICS</option>
+                        <option value="BIOMEDICAL">BIOMEDICAL</option>
+                        <option value="BIOTECHNOLOGY">BIOTECHNOLOGY</option>
+                        <option value="BIOTECH_MTECH">BIOTECH_MTECH</option>
+                        <option value="BSC">BSC</option>
+                        <option value="CHEMICAL">CHEMICAL</option>
+                        <option value="BIOTEC_METCH">BIOTEC_METCH</option>
+                        <option value="CI">CI</option>
+                        <option value="CIVIL">CIVIL</option>
+                        <option value="CIVIL_METCH">CIVIL_METCH</option>
+                        <option value="CSE">CSE</option>
+                        <option value="MECHANICAL">MECHANICAL</option>
+                        <option value="ECE">ECE</option>
+                        <option value="CHEMICAL">CHEMICAL</option>
+                        <option value="FOOD TECH">FOOD TECH</option>
+                        <option value="PHARMACY">PHARMACY</option>
+                        <option value="LLB">LLB</option>
+                        <option value="BBA">BBA</option></select
+                      ><br />
+                      <select name="stkbooktp" class="stkvendc">
+                        <option value="select" align="center">
+                          --Select--
+                        </option>
+                        <option value="ISSUE">ISSUE</option>
+                        <option value="RESEARCH_REFERENCE">
+                          RESEARCH REFERENCE
+                        </option>
+                        <option value="GENERAL_REFERENCE">
+                          GENERAL REFERENCE
+                        </option>
+                        <option value="CIVIL_SERVICE">
+                          CIVIL SERVICE
+                        </option></select
+                      ><br />
+                      <input type="date" name="stkenterdtKKKK" id="" /><br />
+                      <input type="date" name="stkbilldt" id="" /><br />
+                      <input type="number" name="stknoofcpy" id="" /><br />
+                      <input type="number" name="stkisbn" id="" /><br />
+                      <input
+                        type="TEXT"
+                        name="stkfrs"
+                        id=""
+                        placeholder="Floor/Rack/Self"
+                      /><br />
+                      <input type="text" name="stkkywrd" id="" /><br />
+                      <input
+                        type="number"
+                        name="stkbillno"
+                        id=""
+                        placeholder="Bill Number OF CHECK BOOK"
+                      /><br />
+                      <select name="stkvend" class="stkvendc">
+                        <option value="select" align="center">
+                          --Select--
+                        </option>
+                        <option value="it">IT</option>
+                        <option value="ece">ECE</option>
+                        <option value="eee">EEE</option>
+                        <option value="">CSE</option></select
+                      ><br />
+                    </div>
+                  </div>
+                </div>
+                <div id="mainstockbttn">
+                  <input
+                    type="button"
+                    value="AddItem"
+                    id="MAINSTOCKITEMVIGNANAddItemkukjhiuhj"
+                  />
+                  <input
+                    type="button"
+                    value="Modify"
+                    id="MAINSTOCKITEMVIGNANAddItemkukjhiuhjmodifyii"
+                  />
+                  <input type="reset" value="Clear All" />
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="userlogout.js"></script>
+    <script src="dashboard2.js"></script>
+    <script src="dashboard.js"></script>
+    <script>
+      document
+        .getElementById("quickopdropbuttons1a1")
+        .addEventListener("click", function () {
+          location.href = "maintainstock.html";
+        });
+
+      document.getElementById("quickop").addEventListener("click", function () {
+        location.href = "dashboard.html";
+      });
+      document
+        .getElementById("quickopdropbuttons1a2")
+        .addEventListener("click", function () {
+          location.href = "subscribe.html";
+        });
+      document
+        .getElementById("quickopdropbuttons2a1")
+        .addEventListener("click", function () {
+          location.href = "circulationcontrol.html";
+        });
+      document
+        .getElementById("quickopdropbuttons4a1")
+        .addEventListener("click", function () {
+          location.href = "createaccountmanual.html";
+        });
+      document.getElementById("quickop").addEventListener("click", function () {
+        location.href = "dashboard.html";
+      });
+      document
+        .getElementById("quickopdropbuttons5a1")
+        .addEventListener("click", function () {
+          location.href = "dailyreports.html";
+        });
+      document
+        .getElementById("quickopdropbuttons6a1")
+        .addEventListener("click", function () {
+          location.href = "Adminregister.html";
+        });
+      document
+        .getElementById("quickopdropbuttons5a2")
+        .addEventListener("click", function () {
+          location.href = "Bs.html";
+        });
+      document
+      .getElementById("quickopdropbuttons6a2")
+      .addEventListener("click", function () {
+        location.href = "contactus.html";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+    body{
+      background-color: rgb(184, 180, 180);
+      height: fit-content;
+    }
+    #cntucontainer {
+      padding: 0%;
+      margin: 0%;
+      /* height: 1000px; */
+      /* background-color: red; */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    
+    #cntcmainhead {
+      /* background-color: blue; */
+      height: 5%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Roboto Slab', serif;
+    }
+    
+    #cntcsmhead {
+      /* background-color: green; */
+      height: 5%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Roboto Slab', serif;
+      margin-top: -1%;
+    }
+    
+    #cntchodsec {
+      /* background-color: yellow; */
+      height: 55%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-top: 1%;
+    }
+    
+    #cntchodpic {
+      background-color: red;
+      background-image: url("hodpic.jpg");
+      width: 150px;
+      height: 150px;
+      border-radius: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+    #cntcfcltsec {
+      /* background-color: blue; */
+      height: 25%;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-top: 4%;
+    }
+    
+    #cntcfclty1 {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    
+    #cntcfclty1pic {
+      background-image: url("lakshmima'am.jpg");
+      width: 150px;
+      height: 150px;
+      border-radius: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+    #cntcfclty2 {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    #cntcfclty2pic {
+      background-image: url("madhusir.jpg");
+      width: 150px;
+      height: 150px;
+      border-radius: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    #cntcdevhead {
+      /* background-color: rgb(255, 0, 0); */
+      height: 0%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1%;
+      font-size: xx-large;
+      font-family: 'Roboto Slab', serif;
+    }
+    
+    #cntcstdsec {
+      height: 25%;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-top: 3%;
+    }
+    
+    #cntcstdranjeet,
+    #cntcstdvikash,
+    #cntcstdved {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    
+    #cntcstdvedpic {
+      background-image: url("vedpic.JPG");
+      width: 150px;
+      height: 150px;
+      border-radius: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+    #cntcstdranjeetpic {
+      background-image: url("ran.jpg");
+      width: 150px;
+      height: 150px;
+      border-radius: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    #cntcstdvikashpic{
+      background-image: url("vikashpic.jpg");
+      width: 150px;
+      height: 150px;
+      border-radius: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    #cntchlpbttn {
+      /* background-color: yellow; */
+      height: 5%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    #cntchelpbt {
+      width: 10%;
+      margin-top: 5%;
+      border: 1px solid black;
+      border-radius: 40px;
+    }
+    
+    #cntchelpbt:hover {
+      background-color: rgba(16, 23, 229, 0.521);
+    }
+    
+    #cntcfotr {
+      /* background-color: blue; */
+      height: 5%;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .cntccbttn {
+      margin-left: 30%;
+      width: 100px;
+      margin-top: 1%;
+      color: rgb(3, 3, 3);
+      background-color: rgb(255, 254, 254);
+      border: none;
+      border-radius:20px;
+    }
+    
+    .descspn{
+      font-size:larger;
+    }
+    
+    .descspn1 button a{
+      text-decoration: none;
+      color:#000000;
+    }
+    .descspn1 button{
+      border: none;
+      background-color: transparent;
+    }
+</style>
+</head>
+
+<body>
+    <div id="cntucontainer">
+        <div id="cntcmainhead">
+            <h1>About Us</h1>
+        </div>
+        <div id="cntcsmhead">
+            <h3>To whom and concern that under the guidance of:-</h3>
+        </div>
+        <div id="cntchodsec">
+            <div id="cntchodpic">
+            </div>
+            <div id="cntchoddesc">
+                <span class="descspn"></span>Dr. Krishna Kishore <br>
+                <span class="descspn"></span>HOD,Dept of IT <br>
+                <span class="descspn1">Email:-<button onclick="document.location='default.asp'"><a href="mailto:das.ranjeet012@gmail.com">das.ranjeet012@gmail.com</a></button></span> <br>
+                <span class="descspn"></span>mob.No:- <br>
+                <input type="button" value="Contact" class="cntccbttn">
+            </div>
+        </div>
+        <div id="cntcfcltsec">
+            <div id="cntcfclty1">
+                <div id="cntcfclty1pic">
+                </div>
+                <div id="cntcfclty1desc">
+                    <span class="descspn"></span>Mrs. P.R.M.S. Lakshmi <br>
+                    <span class="descspn"></span>Faculty,Dept of IT <br>
+                    <span class="descspn1">Email:-<button onclick="document.location='default.asp'"><a href="mailto:patibandla.lakshmi@gmail.com">patibandla.lakshmi@gmail.com</a></button></span> <br>
+                    <span class="descspn"></span>mob.No:- 9849170637 <br>
+                    <input type="button" value="Contact" class="cntccbttn">
+                </div>
+            </div>
+            <div id="cntcfclty2">
+                <div id="cntcfclty2pic">
+                </div>
+                <div id="cntcfcltydesc">
+                    <span class="descspn"></span>Mr. D.Madhusudhan Rao<br>
+                    <span class="descspn"></span>Faculty,Dept of IT <br>
+                    <span class="descspn1">Email:-<button onclick="document.location='default.asp'"><a href="mailto:madhu.dontha@gmail.com">madhu.dontha@gmail.com</a></button></span> <br>
+                    <span class="descspn"></span>mob.No:- 8121719885<br>
+                    <input type="button" value="Contact" class="cntccbttn">
+                </div>
+            </div>
+
+        </div>
+        <div id="cntcdevhead">
+            <marquee behavior="" direction="left"><h2>DEVELOPER</h2></marquee>
+        </div>
+        <div id="cntcstdsec">
+            <div id="cntcstdranjeet">
+                <div id="cntcstdranjeetpic">
+                </div>
+                <div id="cntcstdranjeetdesc">
+                    <span class="descspn"></span>Ranjeet Kumar Das <br>
+                    <span class="descspn"></span>Student,Dept of IT <br>
+                    <span class="descspn1">Email:-<button onclick="document.location='default.asp'"><a href="mailto:das.ranjeet012@gmail.com">das.ranjeet012@gmail.com</a></button></span> <br>
+                    <span class="descspn"></span>mob.No:- 7033349931 <br>
+                    <input type="button" value="Contact" class="cntccbttn">
+                </div>
+            </div>
+            <div id="cntcstdvikash">
+                <div id="cntcstdvikashpic">
+                </div>
+                <div id="cntcstdvikashdesc">
+                    <span class="descspn"></span>Vikash Kumar <br>
+                    <span class="descspn"></span>Student,Dept of IT <br>
+                    <span class="descspn1">Email:-<button onclick="document.location='default.asp'"><a href="mailto:vikashkumar8651378289@gmail.com">vikashkumar8651378289@gmail.com</a></button></span> <br>
+                    <span class="descspn"></span>mob.No:- 8651378289<br>
+                    <input type="button" value="Contact" class="cntccbttn">
+                </div>
+            </div>
+            <div id="cntcstdved">
+                <div id="cntcstdvedpic">
+                </div>
+                <div id="cntcstdveddesc">
+                    <span class="descspn"></span>Ved Prakash Soni <br>
+                    <span class="descspn"></span>Student,Dept of IT <br>
+                    <span class="descspn1">Email:-<button onclick="document.location='default.asp'"><a href="mailto:bedu@duck.com">bedu@duck.com</a></button></span> <br>
+                    <span class="descspn"></span>mob.No:- 6206382375 <br>
+                    <input type="button" value="Contact" class="cntccbttn">
+                </div>
+            </div>
+        </div>
+        <div id="cntchlpbttn">
+            <input type="button" value="Help" id="cntchelpbt">
+        </div>
+        <div id="cntcfotr">
+            <p>
+                Copyright © Vignan's Foundation for Science, Technology and Research
+                (Deemed to be University) 2016. All rights reserved.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="circulationcontrol.css" />
+    <link rel="stylesheet" href="dashboard2.css" />
+    <script src="jquery-3.6.0.js"></script>
+    <script src="moment-with-locales.min.js"></script>
+    <script src="userlog.js"></script>
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Fira+Sans&family=Inconsolata:wght@300&display=swap");
+
+      body {
+        background-image: url("image/bg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .main {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color:blue; */
+      }
+
+      .container {
+        background-position: center;
+        /* margin: 50px 40px; */
+        background-color: rgba(184, 176, 176, 0);
+        height: fit-content;
+        border-radius: 20px;
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .left {
+        background-color: #fff;
+        width: 60%;
+        float: left;
+        height: fit-content;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 5%;
+        border-radius: 2em;
+      }
+
+      .heading {
+        margin-top: 70px;
+        font-weight: 1000;
+        color: rgb(82, 82, 82);
+      }
+
+      .email {
+        margin-top: 10px;
+      }
+
+      .left input {
+        width: 250px;
+        height: 35px;
+        background: transparent;
+        border-bottom: 1px solid rgb(226, 130, 12);
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        color: rgb(5, 5, 5);
+        font-size: 15px;
+        letter-spacing: 1px;
+        margin-top: 20px;
+        font-family: sans-serif;
+      }
+
+      .left input:focus {
+        outline: none;
+      }
+
+      .btn {
+        background-color: rgb(183, 183, 183);
+        border-radius: 30px;
+        border: none;
+        width: 247px;
+        height: 40px;
+        font-size: 20px;
+        margin-top: 30px;
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+        font-family: "Fira Sans", sans-serif;
+        font-weight: 800;
+      }
+
+      .btn:active {
+        background-color: rgb(107, 107, 107);
+      }
+
+      .signin a {
+        border-radius: 10px;
+        text-decoration: none;
+      }
+
+      /* .right {
+        background-color: rgb(8, 19, 242);
+        width: 40%;
+        float: right;
+        height: 83vh;
+        border-radius: 90% 5% 5% 28%/73% 4% 4% 27%;
+        background-size: cover;
+      } */
+    </style>
+  </head>
+  <body>
+    <div id="body">
+      <div id="pehlabeta">
+        <div id="navisecn">
+          <div id="naviadminpicsecn" style="cursor: pointer">
+            <div id="adminpicbap"><div id="adminpic"></div></div>
+            <div id="admininfo" style="color: white"></div>
+          </div>
+          <div id="quickmenu">
+            <div id="quickmenulist">
+              <div id="quickop" style="cursor: pointer">
+                <img
+                  src="icons8-home-480.png"
+                  alt=""
+                  width="25px"
+                  height="25px"
+                  id="dashboardminilogo"
+                />
+                <p>dashboard</p>
+                <img
+                  src="icons8-home-480.png"
+                  alt=""
+                  width="25px"
+                  height="25px"
+                  style="opacity: 0"
+                />
+              </div>
+              <div id="quickop1">
+                <img src="download (1).png" alt="" width="25px" height="25px" />
+                <p style="cursor: pointer">Cataloguing</p>
+                <img
+                  src="icons8-plus-+-240.png"
+                  width="15em"
+                  height="15em"
+                  id="quickop1ex"
+                />
+              </div>
+              <div id="quickopdrop1">
+                <div class="quickopdropbuttons1a" id="quickopdropbuttons1a1">
+                  <img
+                    src="icons8-circle-96.png"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+                  <p style="cursor: pointer">Maintain Stocks</p>
+                  <img
+                    src="icons8-plus-+-240.png"
+                    width="15em"
+                    height="15em"
+                    style="opacity: 0"
+                  />
+                </div>
+                <div class="quickopdropbuttons1a" id="quickopdropbuttons1a2">
+                  <img
+                    src="icons8-circle-96.png"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+                  <p style="cursor: pointer">Subscribe</p>
+                  <img
+                    src="icons8-plus-+-240.png"
+                    width="15em"
+                    height="15em"
+                    style="opacity: 0"
+                  />
+                </div>
+                <!-- <div class="quickopdropbuttons1a">
+                  <img
+                    src="icons8-circle-96.png"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+                  <p style="cursor: pointer">Magazine Attendance</p>
+                  <img
+                    src="icons8-plus-+-240.png"
+                    width="15em"
+                    height="15em"
+                    style="opacity: 0"
+                  />
+                </div>
+                <div class="quickopdropbuttons1a">
+                  <img
+                    src="icons8-circle-96.png"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+                  <p style="cursor: pointer">BoundVolumeMaintenance</p>
+                </div>
+                <div class="quickopdropbuttons1a">
+                  <img
+                    src="icons8-circle-96.png"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+                  <p style="cursor: pointer">Change Status</p>
+                  <img
+                    src="icons8-plus-+-240.png"
+                    width="15em"
+                    height="15em"
+                    style="opacity: 0"
+                  /> 
+                </div>-->
+              </div>
+              <div id="quickop2">
+                <img src="download (1).png" alt="" width="25px" height="25px" />
+                <p style="cursor: pointer">Circulation Control</p>
+                <img
+                  src="icons8-plus-+-240.png"
+                  width="15em"
+                  height="15em"
+                  id="quickop2ex"
+                />
+              </div>
+              <div id="quickopdrop2">
+                <div class="quickopdropbuttons2a" id="quickopdropbuttons2a1">
+                  <img
+                    src="icons8-circle-96.png"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+                  <p style="cursor: pointer">Circulations</p>
+                  <img
+                    src="icons8-plus-+-240.png"
+                    width="15em"
+                    height="15em"
+                    style="opacity: 0"
+                  />
+                </div>
+                <!-- <div class="quickopdropbuttons2a">
+                  <img
+                    src="icons8-circle-96.png"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+                  <p style="cursor: pointer">Reservations</p>
+                  <img
+                    src="icons8-plus-+-240.png"
+                    width="15em"
+                    height="15em"
+                    style="opacity: 0"
+                  />
+                </div> -->
+              </div>
+              <div id="quickop3">
+                <img src="download (1).png" alt="" width="25px" height="25px" />
+                <p style="cursor: pointer">Acquisitions</p>
+                <img
+                  src="icons8-plus-+-240.png"
+                  width="15em"
+                  height="15em"
+                  id="quickop3ex"
+                />
+              </div>
+              <div id="quickopdrop3">
+                <div class="quickopdropbuttons2a" id="quickopdropbuttons3a1">
+                  <img
+                    src="icons8-circle-96.png"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+                  <p style="cursor: pointer">Ordering</p>
+                  <img
+                    src="icons8-plus-+-240.png"
+                    width="15em"
+                    height="15em"
+                    style="opacity: 0"
+                  />
+                </div>
+                <div class="quickopdropbuttons2a">
+                  <img
+                    src="icons8-circle-96.png"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+                  <p style="cursor: pointer">Vendor Maintenance</p>
+                  <img
+                    src="icons8-plus-+-240.png"
+                    width="15em"
+                    height="15em"
+                    style="opacity: 0"
+                  />
+                </div>
+              </div>
+
+              <div id="quickop4">
+                <img src="download (1).png" alt="" width="25px" height="25px" />
+                <p style="cursor: pointer">Account Maintenance</p>
+                <img
+                  src="icons8-plus-+-240.png"
+                  width="15em"
+                  height="15em"
+                  id="quickop4ex"
+                />
+              </div>
+              <div id="quickopdrop4">
+                <div class="quickopdropbuttons2a" id="quickopdropbuttons4a1">
+                  <img
+                    src="icons8-circle-96.png"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+                  <p style="cursor: pointer">Create Account Manually</p>
+                </div>
+                <div class="quickopdropbuttons2a" style="display: none">
+                  <img
+                    src="icons8-circle-96.png"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+                  <p style="cursor: pointer">Create Account Automate</p>
+                </div>
+              </div>
+              <div id="quickop5">
+                <img src="download (1).png" alt="" width="25px" height="25px" />
+                <p style="cursor: pointer">Reports</p>
+                <img
+                  src="icons8-plus-+-240.png"
+                  width="15em"
+                  height="15em"
+                  id="quickop5ex"
+                />
+              </div>
+              <div id="quickopdrop5">
+                <div class="quickopdropbuttons2a" id="quickopdropbuttons5a1">
+                  <img
+                    src="icons8-circle-96.png"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+                  <p style="cursor: pointer">Daily Reports</p>
+                  <img
+                    src="icons8-plus-+-240.png"
+                    width="15em"
+                    height="15em"
+                    style="opacity: 0"
+                  />
+                </div>
+                <div class="quickopdropbuttons2a" id="quickopdropbuttons5a2">
+                  <img
+                    src="icons8-circle-96.png"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+                  <p style="cursor: pointer">Book Statistics</p>
+                  <img
+                    src="icons8-plus-+-240.png"
+                    width="15em"
+                    height="15em"
+                    style="opacity: 0"
+                  />
+                </div>
+                <!-- <div class="quickopdropbuttons2a">
+                  <img
+                    src="icons8-circle-96.png"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+                  <p style="cursor: pointer">Department Expenditure</p>
+                </div>
+                <div class="quickopdropbuttons2a">
+                  <img
+                    src="icons8-circle-96.png"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+                  <p style="cursor: pointer">Department Libraries</p>
+                  <img
+                    src="icons8-plus-+-240.png"
+                    width="15em"
+                    height="15em"
+                    style="opacity: 0"
+                  />
+                </div>
+                <div class="quickopdropbuttons2a">
+                  <img
+                    src="icons8-circle-96.png"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+                  <p style="cursor: pointer">Department Volume Lists</p>
+                </div>
+                <div class="quickopdropbuttons2a">
+                  <img
+                    src="icons8-circle-96.png"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+                  <p style="cursor: pointer">View Account Holders</p>
+                  <img
+                    src="icons8-plus-+-240.png"
+                    width="15em"
+                    height="15em"
+                    style="opacity: 0"
+                  />
+                </div>
+                <div class="quickopdropbuttons2a">
+                  <img
+                    src="icons8-circle-96.png"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+                  <p style="cursor: pointer">Magazines Subscribed</p>
+                  <img
+                    src="icons8-plus-+-240.png"
+                    width="15em"
+                    height="15em"
+                    style="opacity: 0"
+                  />
+                </div> -->
+              </div>
+              <div id="quickop6">
+                <img src="download (1).png" alt="" width="25px" height="25px" />
+                <p style="cursor: pointer">Administeration</p>
+                <img
+                  src="icons8-plus-+-240.png"
+                  width="15em"
+                  height="15em"
+                  id="quickop6ex"
+                />
+              </div>
+              <div id="quickopdrop6">
+                <div class="quickopdropbuttons2a" id="quickopdropbuttons6a1">
+                  <img
+                    src="icons8-circle-96.png"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+                  <p style="cursor: pointer">New Admin</p>
+                  <img
+                    src="icons8-plus-+-240.png"
+                    width="15em"
+                    height="15em"
+                    style="opacity: 0"
+                  />
+                </div>
+                <div class="quickopdropbuttons2a" id="quickopdropbuttons6a2">
+                  <img
+                    src="icons8-circle-96.png"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+                  <p style="cursor: pointer">About us</p>
+                  <img
+                    src="icons8-plus-+-240.png"
+                    width="15em"
+                    height="15em"
+                    style="opacity: 0"
+                  />
+                </div>
+              </div>
+              <div id="quickop7">
+                <img src="download (1).png" alt="" width="25px" height="25px" />
+                <p style="cursor: pointer">Utilities</p>
+                <img
+                  src="icons8-plus-+-240.png"
+                  width="15em"
+                  height="15em"
+                  id="quickop7ex"
+                />
+              </div>
+              <div id="quickopdrop7"></div>
+              <div id="quickop8">
+                <img src="download (1).png" alt="" width="25px" height="25px" />
+                <p style="cursor: pointer">OPAC</p>
+                <img
+                  src="icons8-plus-+-240.png"
+                  width="15em"
+                  height="15em"
+                  id="quickop8ex"
+                />
+              </div>
+              <div id="quickopdrop8"></div>
+            </div>
+          </div>
+          <div id="dashboardlogoutbap">
+            <div id="dashboardlogoutbapbtn">
+              <img src="power.png" alt="logout" width="20em" height="25em" />
+              <p>Log Out</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="dusrabeta">
+        <div id="dashboardbap">
+          <div class="main">
+            <div class="container">
+              <!-- left_side_content -->
+              <div class="left">
+                <form action="AdminRegister" method="post">
+                  <div class="logo"></div>
+
+                  <div class="heading">
+                    <h1>Admin-Registraion</h1>
+                  </div>
+
+                  <div>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      placeholder="Enter Name"
+                      required
+                    />
+                  </div>
+
+                  <div class="email">
+                    <input
+                      type="text"
+                      name="aID"
+                      id="aID"
+                      placeholder="Enter Id"
+                      required
+                    /><br />
+                    <br />
+                  </div>
+
+                  <div class="password">
+                    <input
+                      type="Password"
+                      name="Password"
+                      id="Password"
+                      placeholder="Enter Password"
+                    />
+                  </div>
+                  <br />
+                  <button
+                    class="btn"
+                    type="submit"
+                    id="sign_user"
+                    value="Login"
+                  >
+                    Register
+                  </button>
+
+                  <!-- <div class="forget">
+                    <p>
+                      <a href="#">Forget your password?</a>
+                    </p>
+                  </div> -->
+                </form>
+              </div>
+
+              <!-- rigth_side_content -->
+              <!-- <div class="right">
+                <h1>Hello Friends</h1> 
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="userlogout.js"></script>
+    <script src="dashboard2.js"></script>
+    <script src="dashboard.js"></script>
+    <script>
+      document
+        .getElementById("quickopdropbuttons1a1")
+        .addEventListener("click", function () {
+          location.href = "maintainstock.html";
+        });
+
+      document.getElementById("quickop").addEventListener("click", function () {
+        location.href = "dashboard.html";
+      });
+      document
+        .getElementById("quickopdropbuttons1a2")
+        .addEventListener("click", function () {
+          location.href = "subscribe.html";
+        });
+      document
+        .getElementById("quickopdropbuttons2a1")
+        .addEventListener("click", function () {
+          location.href = "circulationcontrol.html";
+        });
+      document
+        .getElementById("quickopdropbuttons4a1")
+        .addEventListener("click", function () {
+          location.href = "createaccountmanual.html";
+        });
+      document.getElementById("quickop").addEventListener("click", function () {
+        location.href = "dashboard.html";
+      });
+      document
+        .getElementById("quickopdropbuttons5a1")
+        .addEventListener("click", function () {
+          location.href = "dailyreports.html";
+        });
+      document
+        .getElementById("quickopdropbuttons5a2")
+        .addEventListener("click", function () {
+          location.href = "Bs.html";
+        });
+      document
+        .getElementById("quickopdropbuttons6a1")
+        .addEventListener("click", function () {
+          location.href = "Adminregister.html";
+        });
+      document
+      .getElementById("quickopdropbuttons6a2")
+      .addEventListener("click", function () {
+        location.href = "contactus.html";
+      });
+    </script>
+  </body>
+</html>
